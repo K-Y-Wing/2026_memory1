@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="AIと一緒に2026年の思い出を振り返るインタビュープロンプト">
+<title>私の2026年の思い出を振り返る</title>
+<style>
+  :root { --ink:#243342; --accent:#376b59; --bg:#f5f7f5; --panel:#fff; --line:#d8e2dc; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Meiryo", "Hiragino Kaku Gothic ProN", sans-serif; color:var(--ink); background:var(--bg); line-height:1.8; font-size:18px; }
+  main { width:min(900px, 100%); margin:0 auto; padding:24px 16px 40px; }
+  header { text-align:center; padding:24px 16px 18px; }
+  h1 { font-size:clamp(26px,5vw,36px); line-height:1.45; margin:0 0 12px; }
+  header p { margin:0; font-size:18px; }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:22px; margin:18px 0; box-shadow:0 2px 10px rgba(20,40,30,.04); }
+  h2 { font-size:23px; margin:0 0 12px; }
+  .instructions { background:#edf4ef; border-radius:12px; padding:16px; }
+  .instructions p { margin:0; }
+  .prompt { white-space:pre-wrap; overflow-wrap:anywhere; background:#fbfcfb; border:1px solid var(--line); border-radius:12px; padding:18px; font-size:17px; line-height:1.85; }
+  button { font-family:inherit; cursor:pointer; border:0; border-radius:14px; padding:17px 20px; font-size:20px; font-weight:700; width:100%; min-height:60px; }
+  .copy { color:white; background:var(--accent); margin:16px 0 8px; }
+  .copy:focus-visible { outline:3px solid #e1a84a; outline-offset:3px; }
+  .status { text-align:center; min-height:1.8em; font-weight:bold; color:var(--accent); }
+  .howto { margin-top:18px; }
+  .howto ol { padding-left:1.5em; margin:8px 0; }
+  .howto li { margin:6px 0; }
+  .small { font-size:15px; color:#52616b; }
+  footer { text-align:center; font-size:14px; color:#52616b; padding:10px; }
+  @media(max-width:600px){ body{font-size:17px;} main{padding:14px 12px 28px;} .panel{padding:16px;} .prompt{font-size:16px;padding:14px;} button{font-size:19px;} }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>私の2026年の思い出を<br>AIと一緒に振り返る</h1>
+  <p>AIに思い出を聞いてもらうための文章です。<br>ボタンを押してコピーし、生成AIに貼り付けて使います。</p>
+</header>
+
+<section class="panel instructions">
+  <h2>使い方</h2>
+  <p>下の「プロンプトをコピー」ボタンを押してください。コピーした文章をChatGPTなどの生成AIの入力欄に貼り付けると、インタビューが始まります。</p>
+</section>
+
+<section class="panel">
+  <h2>コピーするプロンプト</h2>
+  <div id="prompt" class="prompt"># 私の2026年の思い出を振り返るインタビュー
+
+あなたは、私の2026年の思い出を聞いてくれる、聞き上手なインタビュアーです。
+
+これから、私が選んだ2026年の思い出について、あなたとの対話を通して振り返っていきます。
+
+私は、ワークシートを参考に、心に残った出来事を1～3つ選んでいます。写真がなくても、言葉で説明するだけで大丈夫です。
+
+## 1．インタビューの進め方
+
+- 私が選んだ思い出を、1つずつ丁寧に聞いてください。
+- 一度に複数の質問をせず、必ず1つの質問をして、私の回答を待ってください。
+- 私の回答に合わせて、自然に次の質問をしてください。
+- 1つの思い出につき、質問は基本的に3～5回程度を目安にしてください。私の回答から十分に思い出が整理できた場合は、質問を追加せず、その思い出のまとめに進んでください。質問の数を増やすことより、私が無理なく楽しく振り返れることを大切にしてください。
+- 出来事の内容だけでなく、そのときの景色、音、香り、味、触れた感覚など、思い出が浮かぶような質問も、話の流れに合わせてしてください。
+- 当時の気持ちや、今振り返って感じることも、無理のない範囲で聞いてください。
+- 五感や気持ちについて、すべてを質問する必要はありません。私が話した内容を大切にし、無理に質問を増やさないでください。
+- 私が答えに困ったときは、質問を簡単にしたり、別の角度から聞いたりしてください。
+- 私が話していない事実や感情を、勝手に付け加えないでください。
+- 個人的な事情や話したくないことについては、無理に聞かないでください。
+- 私の回答が短くても、無理に話を広げようとせず、自然な対話を心がけてください。
+
+## 2．1つの思い出のインタビューを終えるとき
+
+十分に振り返ることができたら、次の内容を整理してください。
+
+- 思い出のタイトル：その出来事を表す短いタイトル
+- 思い出の文章：私が話した内容をもとに、2～3行程度にまとめた文章
+- 印象に残った情景や気持ち：その思い出を表す言葉
+
+私が話した言葉や気持ちをできるだけ残し、私らしい文章にしてください。
+
+整理したら、次の思い出に進むか、インタビューを終了するか、私に尋ねてください。
+
+## 3．すべての思い出を振り返った後
+
+私が選んだ思い出のインタビューがすべて終わったら、それぞれの思い出を一覧に整理してください。
+
+その際、次の内容をまとめてください。
+
+- 思い出のタイトル
+- 思い出の短い文章
+- 思い出を表す情景や気持ち
+
+最後に、これらの思い出を1枚のコラージュ画像にまとめるために使える、画像生成用の文章を作成してください。
+
+画像生成用の文章は、私が話した内容をもとに作り、実際に話していない人物、出来事、情景を勝手に追加しないでください。
+
+準備ができたら、最初の思い出について、私に1つ質問してください。</div>
+<button id="copyButton" class="copy" type="button">プロンプトをコピー</button>
+<div id="status" class="status" aria-live="polite"></div>
+</section>
+
+<section class="panel howto">
+<h2>コピーした後は</h2>
+<ol>
+  <li>ChatGPTなど、使いたい生成AIを開きます。</li>
+  <li>メッセージ入力欄をタップします。</li>
+  <li>入力欄を長押しして「貼り付け」を選びます。</li>
+  <li>貼り付けた文章を送信すると、AIとのインタビューが始まります。</li>
+</ol>
+<p class="small">※写真をAIに送る必要はありません。写真を見ながら、思い出を言葉で伝えても大丈夫です。</p>
+</section>
+<footer>パソコンボランティアWing</footer>
+</main>
+<script>
+const copyButton = document.getElementById('copyButton');
+const promptText = document.getElementById('prompt').innerText;
+const status = document.getElementById('status');
+
+copyButton.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(promptText);
+    status.textContent = 'コピーしました。生成AIの入力欄に貼り付けてください。';
+  } catch (err) {
+    const area = document.createElement('textarea');
+    area.value = promptText;
+    area.style.position = 'fixed';
+    area.style.opacity = '0';
+    document.body.appendChild(area);
+    area.focus();
+    area.select();
+    try {
+      const ok = document.execCommand('copy');
+      status.textContent = ok ? 'コピーしました。生成AIの入力欄に貼り付けてください。' : 'コピーできませんでした。文章を選択してコピーしてください。';
+    } catch (e) {
+      status.textContent = 'コピーできませんでした。文章を選択してコピーしてください。';
+    }
+    area.remove();
+  }
+});
+</script>
+</body>
+</html>
